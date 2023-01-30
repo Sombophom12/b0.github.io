@@ -6,6 +6,73 @@ body{
     box-sizing: border-box;
    
 }
+
+nav{
+    top: 0;
+    display: flex;
+    position: fixed;
+    z-index: 10000;
+    width: 100%; 
+    justify-content: space-between;
+    text-align: center;
+    background-color:#d4d8e0;
+   
+    
+}
+.nav-link{  
+   text-align: right;
+  
+   flex: 1;
+   
+
+}
+.nav-link ul{
+   margin-right: 90px;
+}
+.nav-link ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 6px 32px;
+    
+    
+
+}
+.nav-link ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: tomato;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.nav-link ul li:hover::after{
+    width: 100%;
+}
+.nav-link ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+    font-family: koulen;
+}
+nav img{
+    width: 200px;
+    margin-left: 5%;
+    filter: drop-shadow(5px 0px 5px white);
+    position: absolute;
+   
+}
+
+nav .fa{
+    display:none ;
+}
+/*
+.header{
+    width: 1440px;
+    height: 100vh;
+}
 .logo img{
     width: 300px;
     height: 200px;
@@ -42,34 +109,51 @@ body{
     transition: 0.5s;
     z-index: 1000;
     height:  100px;
-    
+   
 }
 .header ul{
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+    width: 700px;   
 }
 .header ul li{
-   
+    
     position: relative;
     list-style: none;
+    padding: 0px 20px;
+   
 }
+.header ul li .home1::after{
+    font-size: 25px;
+    content: '';
+    width: 70px;
+    height: 5px;
+    background-color:rgb(250, 248, 248);
+    display: block;
+    margin-left: 15px;
+  
+    
+    border-radius: 2px;
+    text-align: center;
+
+}
+
+
 .header ul li a{
     position:relative;
     text-decoration: none;
     transition: 0.6s;
     font-weight: 500;
-    margin: 0 15px;
+    margin: 0 25px;
     font-family: koulen;
     color: rgb(245, 241, 241);
 
     
 }
 
-
+.header.sticky ul li .home1::after{
+    background-color: #000;
+    
+}
 .header.sticky{
     width: 100%; 
     
@@ -78,10 +162,32 @@ body{
 }
 .header.sticky ul li a{
     color: #000;
-    margin: 0 15px;   
+    margin: 0 25px;   
 }
 .header.sticky .fa-home{
     color: #000;
+}
+*/
+.text{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+   
+}
+.text h1{
+    margin-top: 20%;
+
+    font-family: koulen;
+    text-align: center;
+    color: rgb(245, 240, 240);
+}
+.text p{
+    font-family: battambang;
+    width: 1000px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
 }
 .section{
     margin: 0;
@@ -308,7 +414,16 @@ input{
 
 h4{
     
-    margin-left: 100%;
+    margin-left: 10%;
+   
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;   
+}
+h5{
+    margin-left: 10%;
    
     height: 200px;
     display: flex;
@@ -320,38 +435,24 @@ h4{
     overflow: hidden;
     margin-top: -300px;
     z-index: 800;
-    width: 230%;
+    width: 900px;
+    margin-right: 20%;
+    margin-left: 300px;
+    position: absolute;
     
-    margin-left: 10%;
-}
-h4 .image{
-    width: 1050px;
-    height: 400px;
-    
-}
-h4.sticky{
-margin-left: 50%;
-
-}
-h4.sticky .image{
-
-margin: 0 20px;  
+   
+  
+   
 }
 
-h5 img{
-    width: 300px;
-    margin-top: 30px;
-    margin-left: 100%;
-    align-items: right;
-    justify-content: right;
-    justify-items: right;  
-    transition: 1s;
-        
+.picture2 h4 .image{
+    width: 700px;
+    height: 500px;
+    margin-left: 300px;
 }
-h5.sticky img{
-    margin-left: 50%;
+.picture2 h5 .image{
+    margin-left: 200px;
 }
-
 
 .section3{
     width: 100%;
@@ -421,6 +522,16 @@ h5.sticky img{
 .som4:hover{
     background-color: orange;
 }
+.button{
+    background-color: rgb(204, 191, 116);
+    width: 150px;
+    text-align: center;
+   
+    border-radius: 10px;
+}
+.button a{
+    color: #000;
+}
 .section4{
     width: 100%;
     height: 500px;
@@ -454,7 +565,7 @@ h5.sticky img{
     display: flex;
     position: relative;
     border: 0px solid black;
-    max-width: 2500px;
+    max-width: 100%;
     max-height: 440px;
     overflow-x: auto;
    
@@ -510,10 +621,10 @@ h5.sticky img{
 .hover{
     position: absolute;
     width: 400px;
-    height: 150px;
+    height: 190px;
     transition: 0.5s;
-    margin-top: 61.5%;
-    margin-left: 6%;
+    margin-top: 51.5%;
+    margin-left: 5.8%;
 }
 
 .layer:hover .hover{
@@ -539,11 +650,11 @@ h5.sticky img{
     font-family: battambang;
 }
 .hover a{
-    color: #d4d8e0;
+    color: #000000;
     font-size: 15px;
 }
 .layer:hover h2{
-    bottom: 5%;
+    bottom: 0%;
     opacity: 1;
     
 }
@@ -582,9 +693,13 @@ h5.sticky img{
 	font-size: 18px;
 	font-family: battambang;
 }
+.footer1 .fa{
+    margin: 0 05px;
+
+}
 .icon .fa{
 	margin: 0 10px;
-	padding: 20px 0;
+	padding: 20px 20px;
 	cursor: pointer;
     color: blue;
 }
@@ -593,20 +708,22 @@ h5.sticky img{
 	border-radius: 10px;
 	transition: 0.5s;
 }
+/*
 @media(max-width:700px){
+
     .header{
-        height:50px
+        display: none;
+       
     }
     .header ul li a{
-        font-size: 10px;
-        padding: 0;
-        
+       display: none;
 
     }
     .header ul li{
-        width: 130px;
-        margin-left: -50px;
+        display: none;
+        
     }
+    
     .logo img{
         width: 200px;
         height: 100px;
@@ -618,28 +735,47 @@ h5.sticky img{
         margin-left: -180px;
         
     }
+    .text{
+        width: 935px;
+    }
     .text h1{
         font-size: 12px;
+       
     }
     .text p{
         font-size: 12px;
-        width: 90%;
+        width: 600px;
     }
     .nav-m{
-        margin-top: 75%;
-        margin-left: -30%;
+        margin-top: 300px;
+        margin-left: -320px;
     }
     .m-btn{
         width: 10px;
        
     }
     .nav_auto{
-        margin-top: 75%;
-        margin-left: -30%;
+        margin-top: 300px;
+        margin-left: -320px;
 
     }
     .nav_auto .bo{
         width: 10px;
+    }
+    .section{
+        width: 935px;
+    }
+    .slider{
+        width: 935px;
+    }
+    .slide{
+        width: 935px;
+    }
+    .st img{
+        width: 935px;
+    }
+    .body{
+        width: 935px;
     }
     .body h1 a{
         font-size: 15px;
@@ -647,7 +783,7 @@ h5.sticky img{
 
     }
     .text1{
-        margin-top: 50%;
+        margin-top: 680px;
     }
     .text1 h2{
         font-size: 15px;
@@ -658,33 +794,36 @@ h5.sticky img{
        
     .text1 p{
         font-size: 12px;
-        width: 80%;
+        width: 500px;
     }
+
+
     .picture2{
-        margin-left: -110%;
-        margin-top:-75% ;
-        
+       width: 550px;
+       margin-top: -520px;
+       margin-left: -90px;
         
     }
+   
     h4 .image{
        
-        width: 400px;
+        width: 300px;
         height: 200px;
-        margin-left: -60%;
+       margin-left: 330px;
         
     }
-    h5{
-        margin-left: -40%;
-
-    }
-    h5 img{
-        margin-top: -5%;
+    h5 .image{
         width: 200px;
-        
-        
+        margin-left: 260px;
+        margin-top: -150px;
 
     }
+   
+        
+
+   
     .section3{
+        width: 935px;
         height: 750px;
     }
     .section3 h1{
@@ -705,7 +844,7 @@ h5.sticky img{
         margin-top: -40px;
     }
     .som{
-        width: 90%;
+        width: 600px;
         height: 140px;
         position: relative;
         margin-left: 5%;
@@ -713,10 +852,11 @@ h5.sticky img{
 
     }
     .section4{
+        width: 935px;
         height: 350px;
     }
     .box{
-        min-width: 700px;
+        min-width: 480px;
         min-height: 300px;
         overflow-x: auto;
     }
@@ -731,7 +871,7 @@ h5.sticky img{
     .hover{
         width:300px ;
         margin-left: 6.6%;
-        margin-top: 48%;
+        margin-top: 400px;
 
     }
     .vila{
@@ -739,7 +879,7 @@ h5.sticky img{
     }
     .layer h2{
         font-size: 15px;
-        left: 50%;
+        left: 350px;
        
        
     }
@@ -747,12 +887,136 @@ h5.sticky img{
         
        width: 230px;
     }
+    .footer{
+        width: 935px;
+    }
     .footer h2{
         font-size: 15px;
     }
     .footer P{
         font-size: 14px;
-        width: 90%;
+        width: 600px;
         margin: auto;
     } 
+}
+*/
+.header{
+    position: relative;
+}
+@media(max-width:576px) {
+    nav img{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .logo{
+        margin-left: 40px;
+    }
+   nav{
+    position: fixed;
+    width: 576px;
+   }
+    .nav-link{
+        height: 100vh;
+        width: 200px;
+        background: rgb(0,0,0);
+        position: absolute;
+        top: 0;
+        right: -225px;
+        z-index: 2;
+        transition: 1s;
+        text-align: left;
+        cursor: pointer;
+       
+    }
+    .nav-link ul li{
+        width: 120px;
+    }
+    .nav-link ul {
+        padding: 20px;
+    }
+    
+    nav .fa{
+        display: block;
+        color: rgb(34, 213, 213);
+        
+    }
+    nav .bo{
+        padding: 40px 400px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .body .section1 .picture2{
+       width: 100%;
+       margin-top: -560px;
+       margin-left: -60px;
+    }
+    .body .section1 .picture2 h4 .image{
+        margin-left: 20px;
+        width: 500px;
+        height: 300px;
+    }
+    .body .section1 .picture2 h5 .image{
+        margin-left: 110px;
+        margin-top: -140px;
+    }
+    nav .kun{
+        padding: 30px 30px;
+    }
+    
+    .section .text h1{
+        font-size: 15px;
+    }
+    .section .text p{
+        width: 500px;
+        font-size: 15px;
+       
+    }
+    .section .slider .slide .nav-m {
+        margin-left: -120px;
+        margin-top: 580px;
+
+    }
+    .section .slider .slide .nav_auto {
+        margin-left: -120px;
+        margin-top: 580px;
+
+    }
+    .body .section1 .text1{
+        margin-top: 340px;
+       
+    }
+    .body .section1 .text1 p{
+        margin-top: -30px;
+        width: 550px;
+    }
+    .body{
+        
+        height: 700px;
+    }
+    .section3 .hero{
+        display: block;
+        width: 90%;
+        margin-left: 2%;
+    }
+    .section3 .hero .som{
+        width: 540px;
+        height: 150px;
+    }
+    .section3 .hero .som h2{
+        margin-top:-60px ;
+    }
+    .section3 .hero .som p{
+        margin-top: -25px;
+    }
+    .section3{
+        height: 800px;
+    }
+    .section .slider .slide .st img{
+        width: 700px;
+    }
+    
+    
+
+    
 }
